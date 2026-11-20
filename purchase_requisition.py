@@ -18,6 +18,10 @@ class Requisition:
         self.approval_reference = ""
 
     def add_requisition(self, item_name, item_price):
+        if item_price <= 0:
+            print("Invalid price. Price must be greater than zero.")
+            return self.total
+        
         item = {
             "name": item_name,
             "price": item_price
