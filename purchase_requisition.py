@@ -70,6 +70,9 @@ class Requisition:
         print("Requisition ID:", self.requisition_id)
         print("Staff ID:", self.staff_id)
         print("Staff Name:", self.staff_name)
+        print("Items:")
+        for item in self.items:
+            print(f"  - {item['name']}: ${item['price']:.2f}")
         print(f"Total: ${self.total:.2f}")
         print("Status:", self.status)
 
